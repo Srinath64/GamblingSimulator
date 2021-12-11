@@ -2,14 +2,24 @@ package com.company;
 
 public class Gambler {
 
-    public static void main(String[] args) {
+    int stake = 100;
+    int LOSE = 0;
+    int WIN = 1;
 
-        int stake = Integer.parseInt(args[0]);
-        int goal = Integer.parseInt(args[1]);
-        int trials = Integer.parseInt(args[2]);
+    public static void main (String[] args) {
+         Gambler gambler = new Gambler();
+         int trial = (int) Math.floor(Math.random()* 10 ) % 2;
 
-        int bets = 100;
-        int wins = 0;
+        if ( trial == 0){
+            gambler.stake = gambler.stake -1;
+            System.out.println(" "+gambler.stake);
+        }
+        else
+        {
+            gambler.stake = gambler.stake +1;
+            System.out.println(" "+gambler.stake);
+        }
+    }
 
     }
-}
+
