@@ -14,7 +14,7 @@ public class Gambler {
     static int luckyDay=0;
     static int unluckyDay=0;
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println("Welcome To Gambler Simulator");
 
         int Stack_Upper = 150;
@@ -27,6 +27,7 @@ public class Gambler {
             while(Every_Day_Stack > Stack_Lower && Every_Day_Stack < Stack_Upper) {
                 Random random = new Random();
                 int bet = random.nextInt(2);
+
 
                 switch(bet) {
                     case 1:
@@ -61,13 +62,12 @@ public class Gambler {
             Win=0;
             Loss=0;
         }
-        System.out.println("The Luckiest Day is :"+luckyDay);
-        System.out.println("The Unluckiest Day is: "+unluckyDay);
+        System.out.println("The Luckiest Day is "+luckyDay+ " With "+winMax+ " Turn");
+        System.out.println("The Unluckiest Day is "+unluckyDay+ " With "+lossMax+" Turn");
         System.out.println("Total Win Days: "+WinDays);
         System.out.println("Total Loss Days: "+LossDays);
         System.out.println("Total Win Price Won In Month Is " +Winning + "\n");
     }
 }
-
 
 
