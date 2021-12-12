@@ -4,8 +4,13 @@ public class Gambler {
 
     public static void main(String[] args) {
 
-        int STAKE = 100;
-        int BET = 1;
+        System.out.println("Welcome Gambler");
+
+        int Every_Day_Stack=100;
+        int Bet_Every_Game=1;
+
+        System.out.println("Every Day Stack: "+Every_Day_Stack);
+        System.out.println("Bet Price: "+Bet_Every_Game);
 
     }
 }
