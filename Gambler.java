@@ -13,8 +13,10 @@ public class Gambler {
         int Stack_Upper = 150;
         int Stack_Lower = 50;
         int Winning = 0;
+        int WinDays=0;
+        int LossDays=0;
 
-        for(int days = 1; days <= 20; days++) {
+        for(int days = 1; days <= 30; days++) {
             Every_Day_Stack=100;
             while(Every_Day_Stack > Stack_Lower && Every_Day_Stack < Stack_Upper) {
                 Random random = new Random();
@@ -30,14 +32,16 @@ public class Gambler {
                 }
             }
             if(Every_Day_Stack == Stack_Upper) {
-                System.out.println("Player Has Won Gambler For Day "+days);
+                WinDays += 1;
                 Winning += 50;
             }else {
-                System.out.println("Player Has Loss Gambler For Day "+days);
+                LossDays += 1;
                 Winning -= 50;
             }
-            System.out.println("Total Win Price: "+Winning + "\n");
         }
+        System.out.println("Total Win Days: "+WinDays);
+        System.out.println("Total Loss Days: "+LossDays);
+        System.out.println("Total Win Price Won In Month Is " +Winning + "\n");
     }
 }
 
