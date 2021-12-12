@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Random;
+
 public class Gambler {
 
     int stake = 100;
@@ -7,8 +9,8 @@ public class Gambler {
     int WIN = 1;
 
     public static void main (String[] args) {
-         Gambler gambler = new Gambler();
-         int trial = (int) Math.floor(Math.random()* 10 ) % 2;
+        Gambler gambler = new Gambler();
+        int trial = (int) Math.floor(Math.random()* 10 ) % 2;
 
         if ( trial == 0){
             gambler.stake = gambler.stake -1;
@@ -21,5 +23,5 @@ public class Gambler {
         }
     }
 
-    }
+}
 
