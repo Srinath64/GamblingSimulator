@@ -9,10 +9,6 @@ public class Gambler {
     static int LossDays=0;
     static int Win=0;
     static int Loss=0;
-    static int winMax=0;
-    static int lossMax=0;
-    static int luckyDay=0;
-    static int unluckyDay=0;
 
     public static void main(String[] args) {
         System.out.println("Welcome To Gambler Simulator");
@@ -49,21 +45,8 @@ public class Gambler {
                 Winning -= 50;
             }
 
-            if(Win > winMax) {
-                winMax = Win;
-                luckyDay = days + 1;
-            }
 
-            if(Loss > lossMax) {
-                lossMax = Loss;
-                unluckyDay = days + 1;
-            }
-
-            Win=0;
-            Loss=0;
         }
-        System.out.println("The Luckiest Day is "+luckyDay+ " With "+winMax+ " Turn");
-        System.out.println("The Unluckiest Day is "+unluckyDay+ " With "+lossMax+" Turn");
         System.out.println("Total Win Days is : "+WinDays);
         System.out.println("Total Loss Days is : "+LossDays);
         System.out.println("Total Win Price Won In Month Is " +Winning + "\n");
